@@ -1,0 +1,172 @@
+<html>
+  <head>
+    <title>Sign Up</title>
+    <style>
+      i {
+        font-size: 23px;        
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/df66332deb.js" crossorigin="anonymous"></script>
+  </head>
+  <body bgcolor="#000">  
+    <table align="center" width="100%">
+      <tr>
+        <td align="center" width="100%">
+          <table width="700px" border="0" bgcolor="#333" align="center">
+              <tr>
+                <td>
+                  <table height="200px" align="center">
+                    <tr>
+                      <td rowspan="2" width="79%" align="center">
+                        <p align="center" style="margin: -97px; font-family: 'impact'; font-size : 277px; color: #777;">Sign up</p>
+                        <p align="center" style="font-weight: bolder; font-size : 23px; color: #ddd;">회원 가입</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr align="center">
+                <td>
+                  <table style="background-color: #555; font-size : 17px; color: #ddd;" width="95%" border="1" height="150px">
+                    <tr>
+                      <th>
+                        <p><i class="fa-solid fa-circle-user"></i>&nbsp;&nbsp;&nbsp;ID 입력</p>
+                      </th>
+                      <td width="77%">
+                        <input type="text" name="id" id="id" required autofocus placeholder=" Choose Your Unique ID" style="background-color: #555; font-size : 17px; color: #eee; width: 100%; height: 100%" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <p><i class="fa-solid fa-lock"></i>&nbsp;&nbsp;&nbsp;비밀번호</p>
+                      </th>
+                      <td width="79%">
+                        <input type="password" name="pw" id="pw" required placeholder=" Choose Your Password" style="background-color: #555; font-size : 17px; color: #eee; width: 100%; height: 100%" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <p><i class="fa-solid fa-key"></i>&nbsp;&nbsp;&nbsp;재입력</p>
+                      </th>
+                      <td width="79%">
+                        <input type="password" name="pw2" id="pw2" required placeholder=" Type Your Password Again" style="background-color: #555; font-size : 17px; color: #eee; width: 100%; height: 100%" />
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr align="center">
+                <td>
+                  <table style="background-color: #555; font-size : 17px; color: #eee;" width="95%" border="1" height="150px">
+                    <tr>
+                      <th>
+                        <p><i class="fa-solid fa-file-signature"></i>&nbsp;&nbsp;&nbsp;이름</p>
+                      </th>
+                      <td width="79%">
+                        <input type="text" name="name" id="name" required placeholder=" Enter Your Full Name" style="background-color: #555; font-size : 17px; color: #eee; width: 100%; height: 100%" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <p><i class="fa-solid fa-cake-candles"></i>&nbsp;&nbsp;&nbsp;생년월일</p>
+                      </th>
+                      <td width="79%">
+                        <input type="text" name="birthday" id="birthday" required placeholder=" Enter Your Birth Date" style="background-color: #555; font-size : 17px; color: #eee; width: 100%; height: 100%" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <p><i class="fa-solid fa-venus-mars"></i>&nbsp;&nbsp;&nbsp;성별</p>
+                      </th>
+                      <td width="79%" style="background-color: #555; font-size : 17px; color: #ddd;">
+                        <input type="radio" name="gender" id="male" value="Male" style="width: 30%; height: 30%" />
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female" value="Female" style="background-color: #555; font-size : 17px; color: #ddd; width: 30%; height: 30%" checked />
+                        <label for="female">Female</label>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr align="center">
+                <td>
+                  <table style="background-color: #555; font-size : 17px; color: #eee;" width="95%" border="1" height="150px">
+                    <tr>
+                      <th>
+                        <p><i class="fa-solid fa-mobile-screen-button"></i>&nbsp;&nbsp;&nbsp;통신사</p>
+                      </th>
+                      <td width="79%">
+                      <select name="mobile" id="mobile" placeholder=" Choose Your Mobile Carrier" style="background-color: #555; font-size : 17px; color: #aaa; width: 100%; height: 100%">
+                        <option>&nbsp;Choose Your Mobile Carrier</option>
+                        <option>&nbsp;skt</option>
+                        <option>&nbsp;kt</option>
+                        <option>&nbsp;lgt</option>
+                      </select>                        
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <p>휴대전화번호</p>
+                      </th>
+                      <td width="79%">
+                        <input type="text" name="phone" id="phone" required placeholder=" Enter Your Phone Number" style="background-color: #555; font-size : 17px; color: #eee; width: 100%; height: 100%" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <p><i class="fa-solid fa-flag"></i>&nbsp;&nbsp;&nbsp;국적</p>
+                      </th>
+                      <td width="79%" style="background-color: #555; font-size : 17px; color: #ddd;">
+                        <input type="radio" name="nationality" id="korean" value="Korean" style="width: 27%; height: 27%" checked />
+                        <label for="korean">Korean</label>
+                        <input type="radio" name="nationality" id="foreigner" value="Foreigner" style="background-color: #555; font-size : 17px; color: #ddd; width: 27%; height: 27%" />
+                        <label for="foreigner">Foreigner</label>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table width="100%" border="0" height="200px">
+                    <tr>
+                      <td rowspan="2" width="79%" align="center">
+                        <a href="#" align="center" style="background-color: #555; font-size : 17px; color: #eee;">인증 후 가입 Verify and Sign up</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table width="100%" border="0" height="200px">
+                    <tr>
+                      <th></th><td width="79%"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table width="100%" border="0" height="200px">
+                    <tr>
+                      <th></th><td width="79%"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table width="100%" border="0" height="200px">
+                    <tr>
+                      <th></th><td width="79%"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

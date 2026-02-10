@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test18.html</title>
+  <style>
+    div#atom {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transition: width 2s;
+    }
+    div#atom:hover {
+      width: 300px;
+    }
+    div#bb1 { transition-timing-function: linear; }
+    div#bb2 { transition-timing-function: ease; }
+    div#bb3 { transition-timing-function: ease-in; }
+    div#bb4 { transition-timing-function: ease-out; }
+    div#bb5 { 
+      transition: width 2s, height 2s, transtrom 2s;
+    }
+    div#bb5:hover {
+      width: 300px;
+      height: 300px;
+      transform: rotate(180dg);
+    }
+  </style>
+</head>
+<body>
+  <h2>Transition Effect</h2>
+  <p>mouse on</p>
+  <div id="atom"></div>
+  <hr/>
+  <div id="bb1"></div>
+  <div id="bb2"></div>
+  <div id="bb3"></div>
+  <div id="bb4"></div>
+  <div id="bb5"></div>
+</body>
+</html>

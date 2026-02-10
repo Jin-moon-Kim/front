@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .track { width: 500px; border: 2px solid #333; background: #eee; padding: 10px; }
+  .lane { border-bottom: 1px dashed #ccc; position: relative; height: 50px; display: flex; align-items: center; }
+  .horse { 
+    position: absolute; left: 0; font-size: 30px; 
+    transition: left 0.1s linear; /* 부드러운 이동을 위한 설정 */
+  }
+  .finish-line { position: absolute; right: 0; top: 0; bottom: 0; width: 5px; background: red; }
+</style>
+</head>
+<body>
+
+<div class="track">
+  <div class="lane"><div class="horse" id="h1">🐎</div><div class="finish-line"></div></div>
+  <div class="lane"><div class="horse" id="h2">🏇</div><div class="finish-line"></div></div>
+  <div class="lane"><div class="horse" id="h3">🦄</div><div class="finish-line"></div></div>
+</div>
+<button onclick="startRace()">경주 시작!</button>
+
+<script>
+function startRace() {
+  const horses = [
+    { el: document.getElementById('h1'), pos: 0 },
+    { el: document.getElementById('h2'), pos: 0 },
+    { el: document.getElementById('h3'), pos: 0 }
+  ];
+
+  const finish = 460; // 결승선 위치 (px)
+
+  const timer = setInterval(() => {
+    horses.forEach(h => {
+      // 0~15px 사이의 랜덤한 거리를 매번 추가 (속도 무작위)
+      h.pos += Math.random() * 15; 
+      h.el.style.left = h.pos + 'px';
+
+      if (h.pos >= finish) {
+        clearInterval(timer);
+        alert(h.el.innerText + " 승리!");
+        location.reload(); // 게임 리셋
+      }
+    });
+  }, 100); // 0.1초마다 갱신
+}
+</script>
+
+</body>
+</html>

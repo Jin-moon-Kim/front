@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test5.html</title>
+  <!-- <style type="text/css" rel="stylesheet"> -->
+  <style>
+    * {
+      font-size: 1.5em;
+      font-family: "궁서체","돋움체","명조체";
+    }
+    body {
+      margin: 20px;
+    }
+    /* p{font-size: 20pt;} */
+    div, p{
+      font-size: 1em;
+      font-family: "남산체","굴림체","궁서체";
+      line-height: 1.5em;
+    }
+    #mbc{
+      color: red;
+    }
+    .kbs{
+      color: blue;
+    }
+    div span#tbc{
+      color: yellow;
+    }
+
+    div span.tbc2{
+      color: green;
+    }
+    span{
+      color: rgba(225, 12, 225, 0.5);
+      font-size: 2em;
+    }
+    /* tag selector */
+    /* id, class selector */
+  </style>
+</head>
+<body>
+  <h1>Cascading Style Sheet 3</h1>
+  <font size="4" style="font-family: '돋움체'; font-size: 1em; font-weight: bolder;">반갑습니다.</font>
+  <div>반갑습니다2</div>
+  <div id="mbc">반갑습니다<span id="tbc">.....</span>3</div>
+  <div class="kbs">반갑습니다4<span class="tbc2">.....</span></div>
+  <div id="sbs">반갑습니다5</div>
+  <div>반갑습니다6</div>
+  <div id="cjb">반갑습니다7</div>
+  <div class="kbs">반갑습니다8</div>
+  <div>반갑습니다9</div>
+  <hr/>
+  <h2>Inner Style</h2>
+  <p>1.안녕하세요</p>
+  <div>안녕<span>(행복)</span>하세요</div>
+  <p>2.안녕하세요</p>
+  2-1 반갑습니다.<br/>
+  <p>3.안녕하세요</p>
+  3-1 반갑습니다.<br/>
+  <p>4.안녕하세요</p>
+  4-1 반갑습니다.<br/>
+  <p>5.안녕하세요</p>
+</body>
+</html>

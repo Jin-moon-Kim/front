@@ -1,0 +1,94 @@
+<html>
+<head>
+  <title>form1.html(폼태그-양식태그)</title>
+</head>
+<body>
+<br/>
+<!-- <form name="" method="" action=""> -->
+<h2>회 원 가 입(김진문)</h2>
+<form name="myform" method="get" action="form1Ok.html">
+  <table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+      <th>국적</th>
+      <td><input type="text" name="nation" id="nation" value="대한민국" readonly /></td>
+    </tr>
+    <tr>
+      <th>성명</th>
+      <td><input type="text" name="name" id="name" required autofocus placeholder="성명을 입력하세요" /></td>
+    </tr>
+    <tr>
+      <th>소속</th>
+      <td><input type="text" name="sosok" value="인사과" id="sosok" size="10" maxlength="10" /></td>
+    </tr>
+    <tr>
+      <th>나이</th>
+      <td><input type="number" name="age" id="age" value="20" /></td>
+    </tr>
+    <tr>
+      <th>수량</th>
+      <td><input type="number" name="ea" id="ea" value="10" step="10" min="10" max="100"/></td>
+    </tr>
+    <tr>
+      <th>성별</th>
+      <td>
+        <input type="radio" name="gender" id="gender1" value="남자">남자 &nbsp;&nbsp;
+        <input type="radio" name="gender" id="gender2" value="여자" checked>여자
+      </td>
+    </tr>
+    <tr>
+      <th>취미</th>
+      <td>
+        <input type="checkbox" name="hobby" id="hobby1" value="등산" checked>등산
+        <input type="checkbox" name="hobby" id="hobby2" value="낚시">낚시
+        <input type="checkbox" name="hobby" id="hobby3" value="골프">골프
+        <input type="checkbox" name="hobby" id="hobby4" value="요리">요리
+        <input type="checkbox" name="hobby" id="hobby5" value="바둑">바둑
+      </td>
+    </tr>
+    <tr>
+      <th>직업</th>
+      <td>
+        <select name="job" id="job">
+          <option>회사원</option>
+          <option>공무원</option>
+          <option>요리사</option>
+          <option>은행원</option>
+          <option>군인</option>
+          <option>학생</option>
+          <option>기타</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>다녀본산</th>
+      <td>
+        <select name="mountain" id="mountain" size="5" multiple>
+          <option>우암산</option>
+          <option>백화산</option>
+          <option>북한산</option>
+          <option>한라산</option>
+          <option>태백산</option>
+          <option>소백산</option>
+          <option>백두산</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>자기소개</th>
+      <td><textarea name="content" id="content" rows="5" cols="50"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="file" name="fName" id="fName"/></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="submit" value="회원가입1"/>
+        <input type="reset" value="다시입력"/>
+        <input type="button" value="회원가입2"/>
+        <button>회원가입3</button>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

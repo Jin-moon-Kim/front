@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+</head>
+<body>
+  <h2></h2>
+
+  <div id="demo"></div>
+
+  <script>
+    'use strict';
+
+    let str = '';
+
+    let max = Math.max(10, 8, 20, 15, 11, 17);
+    console.log('max : ', max);
+    str += 'max : ' + max + '<br/>';
+    let min = Math.min(10, 8, 20, 15, 11, 17);
+    console.log('min : ', min);
+    str += 'min : ' + min + '<br/>';
+
+    let n1 = 10, n2 = -20, n3 = 3.14, n4= -3.14, n5= 31.5;
+
+    str += 'ceil : ' + Math.ceil(n3)+'<br/>';
+    str += 'ceil : ' + Math.ceil(n4)+'<br/>';
+    str += 'floor : ' + Math.floor(n3)+'<br/>'; 
+    str += 'floor : ' + Math.floor(n4)+'<br/>';
+    str += 'trunc : ' + Math.trunc(n3)+'<br/>';
+    str += 'trunc : ' + Math.trunc(n4)+'<br/>';
+    str += 'pow : ' + Math.pow(2,5)+'<br/>';
+    str += 'sqrt : ' + Math.sqrt(25)+'<br/>';
+    str += 'abs : ' + Math.abs(-25)+'<br/>';
+    str += 'pow : ' + Math.pow(2,5)+'<br/>';
+    
+    str += 'toFixed() : ' + n3.toFixed(1) + '<br/>';
+    str += 'toFixed() : ' + n5.toFixed(1) + '<br/>';
+
+    str += 'random() : ' + Math.random() + '<br/>';
+    str += 'random() : ' + (parseInt(Math.random()*10) + 1) + '<br/>'; //1~10
+    str += 'random() : ' + (parseInt(Math.random()*45) + 1) + '<br/>'; //1~45
+    str += 'random() : ' + (parseInt(Math.random()*10-5+1) + 5) + '<br/>'; //5~10
+
+
+
+    demo.innerHTML = str;
+  </script>
+</body>
+</html>

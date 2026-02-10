@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11.html</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .box {
+      width: 33.3%;
+      float: left;
+      padding: 50px;
+    }
+    .box1 { background-color: blue; }
+    .box2 { background-color: aqua; }
+    .box3 { background-color: brown; }
+    
+    .imgContent {
+      width: 33.3%;
+      float: left;
+      padding: 5px;
+      /* display: table */
+    }
+    #subTitle {
+      clear: both;
+    }
+    img {
+      opacity: 0.5;
+    }
+    img:hover {
+      opacity: 1.0;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Image Trensparency(Opacity)</h2>
+  <div class="container">
+    <div class="box box1">
+      <p>1.in a box</p>
+    </div>
+    <div class="box box2">
+      <p>2.in a box</p>
+    </div>
+    <div class="box box3">
+      <p>3.in a box</p>
+    </div>
+    <hr>
+    <div class="imgContent">
+      <img src="../../images/11.jpg" alt="11.jpg" style="width: 100%;">
+    </div>
+    <div class="imgContent">
+      <img src="../../images/12.jpg" alt="12.jpg" style="width: 100%;">
+    </div>
+    <div class="imgContent">
+      <img src="../../images/13.jpg" alt="13.jpg" style="width: 100%;">
+    </div>
+    <div class="imgContent">
+      <img src="../../images/11.jpg" alt="11.jpg" style="width: 100%;">
+    </div>
+    <div class="imgContent">
+      <img src="../../images/12.jpg" alt="12.jpg" style="width: 100%;">
+    </div>
+    <div class="imgContent">
+      <img src="../../images/13.jpg" alt="13.jpg" style="width: 100%;">
+    </div>
+    <p id="subTitle"> box-sizing 사용, 상자안에서 그림이 보이게</p>
+  </div>
+</body>
+</html>

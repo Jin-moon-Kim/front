@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</head>
+<body>
+<br/>
+<div class="container">
+  <h2>상품주문서</h2>
+  <form name="myform">
+    <div class="mb-2 input-gruop">
+      <div class="input-gruop-text">상품1</div>
+      <div class="mb-2"><input type="number" name="product" id="product1" value="10" min=0 class="form-control"></div>
+    </div>
+    <div class="mb-2 input-gruop">
+      <div class="input-gruop-text">상품2</div>
+      <div class="mb-2"><input type="number" name="product" id="product1" value="10" min=0 class="form-control"></div>
+    </div>
+    <div class="mb-2 input-gruop">
+      <div class="input-gruop-text">상품3</div>
+      <div class="mb-2"><input type="number" name="product" id="product1" value="10" min=0 class="form-control"></div>
+    </div>
+    <div class="mb-2 input-gruop">
+      <div class="input-gruop-text">상품4</div>
+      <div class="mb-2"><input type="number" name="product" id="product1" value="10" min=0 class="form-control"></div>
+    </div>
+    <div class="mb-2 input-gruop">
+      <div class="input-gruop-text">상품5</div>
+      <div class="mb-2"><input type="number" name="product" id="product1" value="10" min=0 class="form-control"></div>
+    </div>
+    <div>
+      <div><input type="button" onclick="fCheck()" value="전송" class="btn btn-success form-control mb-2"  /></div>
+      <div><input type="reset" onclick="" value="다시입력" class="btn btn-warning form-control"  /></div>
+    </div>
+    
+    <div id="demo"></div>
+  </form>
+
+  <script>
+    'use strict';
+
+    function fCheck() {
+      let product1 = document.getElementsByName('product')[0].value;
+      let product2 = document.getElementsByName('product')[1].value;
+      let product3 = document.getElementsByName('product')[2].value;
+      let product4 = document.getElementsByName('product')[3].value;
+      let product5 = document.getElementsByName('product')[4].value;
+
+      if(product1.trim() == "") {
+        alert('상품명1을 입력하세요');
+        document.getElementsByName('product')[0].focus;        
+      }
+      else if(product2.trim() == "") {
+        alert('상품명2를 입력하세요');
+        document.getElementsByName('product')[1].focus;        
+      }
+      else if(product3.trim() == "") {
+        alert('상품명3을 입력하세요');
+        document.getElementsByName('product')[2].focus;        
+      }
+      else if(product4.trim() == "") {
+        alert('상품명1을 입력하세요');
+        document.getElementsByName('product')[3].focus;        
+      }
+      else if(product5.trim() == "") {
+        alert('상품명1을 입력하세요');
+        document.getElementsByName('product')[4].focus;        
+      }
+      else {
+        // let result = eval(product1 + product2 + product3 + product4 + product5);
+        let result = Number(product1) + Number(product2) + Number(product3) + Number(product4) + Number(product5);
+        demo.innerHTML = "상품전체합계 : " + result;
+      }
+    }
+  </script>
+</body>
+</html>

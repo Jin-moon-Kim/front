@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+</head>
+<body>
+  <h2></h2>
+
+  <div id="demo"></div>
+
+  <script>
+    'use strict';
+
+    let text1 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let text2 = ' ABC  BC   ABC   GHI   JKLABCMN........  A BC ... OPQ.. abc    ';
+
+    //substring(), indexOf(), trim 앞 뒤 공백제거, toUpperCase Lower
+    //inludes() 포함 여부
+
+    let str = '';
+    str += 'includes() : ' + text1.includes('abc') + '<br/>';
+    str += 'includes() : ' + text1.includes('abco') + '<br/>';
+    str += 'slice() : ' + text1.slice(5, 10) + '<br/>';
+    str += 'slice() : ' + text1.slice(5) + '<br/>';
+    str += 'substring() : '+ text1.substring(5, 10) + '<br/>';
+    str += 'substring() : '+ text1.substring(5) + '<br/>';
+    str += 'replace() : ' + text1.replace('ABC', 'abc') +'<br/>';
+    str += 'replace() : ' + text2.replace('BC', 'bc') +'<br/>';
+    str += 'replaceAll() : ' + text2.replaceAll('BC', 'bc') +'<br/>';
+    str += 'charAt() : ' + text2.charAt(3) + '<br/>';
+    str += 'split() : ' + text2.split(' ') + '<br/>';
+    let strs = text2.split(' ');
+    for(let s of strs) {
+      str += 'split : ' + s + '<br/>';
+    }
+    let tel = '010-1234-5678'
+    let tels = tel.split('-');
+    tels.forEach((data, i) => console.log(i, data));
+
+    str += '<br/>';
+    str += '<br/>';
+    str += '<br/>';
+    str += '<br/>';
+    str += '<br/>';
+    str += '<br/>';
+
+
+    demo.innerHTML = str;
+  </script>
+</body>
+</html>

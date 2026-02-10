@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test22.html</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 1000px;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+    div {
+      background-color: black;
+      border: 2px solid gray;
+      font-size: 25px;
+    }
+    div#area {
+      width: 960px;
+      height: 350px;
+      margin: 0 auto;
+      background-color: blueviolet;
+    }
+    #tb1 {
+      width: 960px;
+      height: 450px;
+      margin: 0 auto;
+      background-color: blueviolet;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid gray;
+      text-align: center;
+    }
+    div#img {
+      margin: 10px 0;
+      padding: 15px 0;
+    }
+
+    @media screen and (max-width:1024px) {
+      body {
+      margin: 0;
+      padding: 0;
+      }
+      .container {
+      width: 700px;
+      margin: 0 auto;
+      font-size: 15px;
+      }
+      div {
+      background-color: black;
+      border: 2px solid gray;
+      font-size: 20px;
+      }
+    div#area {
+      width: 670px;
+      height: 200px;
+      margin: 0 auto;
+      background-color: chartreuse;
+    }
+    #tb1 {
+      width: 960px;
+      height: 450px;
+      margin: 0 auto;
+      background-color: brown;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid gray;
+      text-align: center;
+    }
+    div#img {
+      margin: 10px 0;
+      padding: 15px 0;
+    }
+    }
+  </style>
+</head>
+<body style="background-color: black; color: blanchedalmond;">
+<div class="container">
+  <h2>media query</h2>
+  <p>Responsive Web Design</p>
+  <hr/>
+  <ul>
+    <li>Desktop : over 1024px</li>
+    <li>Tablet : 768 ~ 1024px</li>    
+    <li>Mobile : under 768px</li>
+  </ul>
+  <hr/>
+  <div id="area">Responsive Web Diplay View</div>
+  <hr/>
+  <table>
+    <tr>
+      <th>주제</th>
+      <th>강사</th>
+      <th>장소</th>
+      <th>시간</th>
+    </tr>
+    <tr>
+      <td>반응형웹</td>
+      <td>홍길동</td>
+      <td>그린아카데미</td>
+      <td>09:30</td>
+    </tr>
+    <tr>
+      <td>웹표준</td>
+      <td>배유나</td>
+      <td>MIT</td>
+      <td>17:30</td>
+    </tr>
+    <tr>
+      <td>Java 프로그래밍</td>
+      <td>김수현</td>
+      <td>Caltech</td>
+      <td>11:00</td>
+    </tr>
+  </table>
+  <hr/>
+  <div id="img">
+    <img src="../../images/16.jpg"/>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+/images/
+/homework/CSS/images/
+/homework/CSS/*.png
+/homework/CSS/*.jpg
+/ppt/
+*.zip
+*.txt
+*.jpg
+*.png
+*.exe

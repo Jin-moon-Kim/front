@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="container">
+    <h2>container</h2>
+
+    <form name="myform" action="">
+      <div>
+        <input type="button" onclick="atom1(100)" value="click" class="btn btn-success m2-3">
+        <input type="button" onclick="atom2()" value="click" class="btn btn-primary">
+      </div>
+      <div>입력 <input type="text" name="n" class="form-controll" > </div>
+    </form>
+
+  </div>
+
+  <script>
+    'use strict'
+
+    function atom1(n) {
+      alert('hi' + n);
+    }
+    function atom2() {
+      let n=document.myform.n.value;
+      alert('hi ' + n);
+    }
+  </script>
+</body>
+</html>

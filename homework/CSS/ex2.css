@@ -1,0 +1,172 @@
+/* PC화면을 기준(최소 1024px) */
+/* 공통사항 */
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "맑은 고딕", "굴림", "돋움", "궁서";
+  font-size: 1em;
+  background: linear-gradient(to bottom, skyblue, white 50%);
+}
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* PC 모드 설정 */
+.container {
+  width: 960px;
+  margin: 0px auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+#mainHeader {
+  height: 280px;
+  margin: 0px;
+  background-image: url("images/12.jpg");
+}
+
+#mainHeader h1 {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.header1 a {
+  color: #ff0;
+  font-size: 2em;
+  text-shadow: 1px 2px 1px #000;
+}
+
+#mainNav {
+  background-color: #060;
+  width: 960px;
+  height: 60px;
+}
+
+#mainNav ul {
+  text-align: center;
+  margin: 0px;
+}
+
+#mainNav ul li {
+  float: left;
+  width: 100px;
+  height: 40px;
+  font-size: 1.1em;
+  padding: 20px 0px 0px 90px;
+  font-weight: bolder;
+}
+
+#mainNav a {
+  color: #fff;
+}
+#mainNav a:hover {
+  color: #00f;
+}
+
+section#content {
+  float: left;
+  width: 720px;
+  background-color: #fff;
+  padding-left: 10px;
+}
+.notice {
+  line-height: 25px;  
+}
+
+#footer {
+  clear: both;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0 20px;
+}
+
+#sidebar  {
+  width: 200px;
+  float: right;
+  padding: 20px 10px;
+  line-height: 30px;
+}
+
+#sidebar img:hover {
+  border: 1px solid #000;
+  opacity: 0.8;
+}
+
+article {
+  margin-top: 25px;
+}
+
+#info ul.notice li {
+  list-style: circle;
+}
+
+/* tablet (600px~1023px) */
+@media screen (min-width:600px) and (max-width:1023) {    
+  .container {
+    width: 580px
+  }
+
+  #mainHeader {
+    height: 170px;    
+    background-image: url("images/11.jpg");
+  }
+
+  #mainHeader h1 {    
+    margin-top: 20px;    
+  }
+
+  .header1 a {    
+    font-size: 1.5em;    
+  }
+
+  #mainNav {    
+    width: 580px;    
+  }
+  #mainNav ul li {
+    width: 90px;    
+    font-size: 1.1em;
+    padding: 20px 0px 0px 90px;
+    font-weight: bold;
+  }
+  section#content {    
+    width: 550px;    
+    padding-left: 10px;
+  }
+  .notice {
+    line-height: 25px;  
+  }
+
+  #footer {
+    font-size: 0.8em;
+  }
+
+  #sidebar  {
+    width: 550px;
+    float: right;
+    padding: 0px 10px;
+  }
+
+  #sidebar img {
+    width: 30%;  
+  }
+  #sidebar img:hover {
+    border: 1px solid #000;
+    opacity: 0.8;
+  }
+
+  article {
+    margin-top: 25px;
+  }
+
+  #info ul.notice li {
+    list-style: circle;
+  }
+}
