@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date2</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <p><br></p>
+  <div class="container">
+    <h2>date function</h2>
+    <div>
+      <input type="button" value="dateFormat1" onclick="dateCheck1()" />
+      <input type="button" value="dateformat2" onclick="dateCheck2()" />
+      <input type="button" value="reload" onclick="location.reload()" />
+    </div>
+    <hr/>
+    <form name="myform">
+      <p>콤보상자에 날짜 자료 '년/월/일'순으로 넣기
+        <select name="yyyy" id="yyyy" onclick="yyyyCheck()">
+          <option value="">년도선택</option>
+        </select>
+        <select name="mm" id="mm" onclick="mmCheck()">
+          <option value="">월선택</option>
+        </select>
+        <select name="dd" id="dd" onclick="ddCheck()">
+          <option value="">일선택</option>
+        </select> &nbsp;
+
+
+      </p>
+    </form>
+
+    <div id="demo" class=""></div>
+  </div>  
+
+  <script>
+    'use strict';
+
+    let day = ['일','월','화','수','목','금','토'];
+
+    let today = new Date();
+
+    function dateCheck1() {
+      let dateFormat1 = today.getFullYear() +'년 ' + (today.getMonth()+1) +'월 '
+        + today.getDate() + '일 ' + day[today.getDay()] + '요일 '
+        + today.getHours() + '시 ' + today.getMinutes() + '분 ' + today.getSeconds() + '초';
+        demo.innerHTML = dateFormat1;
+    }
+    function dateCheck2() {
+      let dateFormat2 = today.getFullYear() +'-' 
+        + ((today.getMonth()+1) < 10 ? '0' + (today.getMonth()+1) : (today.getMonth()+1)) +'-'
+        + ((today.getDate()) < 10 ? '0' + (today.getDate()) : (today.getDate()));
+        demo.innerHTML = dateFormat2;
+    }
+    
+    function yyyyCheck() {
+      let str = '';
+      // for(let i=2026; i>=2000; i--) {
+      //   str += '<option>'+i+'</option>';
+      // }
+      // document.getElementById("yyyy").innerHTML = str;
+      // yyyy.innerHTML = str;
+      
+      for(let i=2026; i>=2000; i--) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.text = i + '년';
+        document.getElementById("yyyy").appendChild(option);
+        // yyyy.appendChild(option);
+      }
+    }
+
+    function mmCheck() {
+      const yyyy = document.getElementById('yyyy').value;
+      if(isNaN(yyyy)) {
+        alert('choose year');
+        return false;
+      }
+      for(let i=1; i<=12; i++) {
+        let option = document.createElement('option');
+        option.value = i;
+        option.text = i + '월';
+        document.getElementById('mm').appendChild(option);
+      }
+    }
+    function ddCheck() {
+      const yyyy = document.getElementById('yyyy').value;
+      const mm = document.getElementById('mm').value;
+
+      if(isNaN(yyyy)) {
+        alert('choose year');
+        return false;        
+      }
+      else if(isNaN(mm)) {
+        alert('choose month');
+        return false;
+      }
+    }
+
+    // demo.innerHTML = dateFormat1;
+
+    function mmChange() {
+      const yyyy = document.getElementById('yyyy').value;
+      const mm = document.getElementById('mm').value;
+    }
+
+    //날짜 출력버튼을 클릭하면 선택한 '년/월/일'을 demo에 출력시킨다.
+    function dateCheck3() {
+      const yyyy = document.getElementById('yyyy').value;
+      let mm = document.getElementById('mm').value;
+      let dd = document.getElementById('dd').value;
+
+      if(mm.length < 2) mm = '0' + mm;
+      if(dd.length < 2) dd = '0' + dd;
+
+      demo.innerHTML = yyyy + '-' + mm + '-' + dd;
+    }
+
+  </script>
+</body>
+</html>

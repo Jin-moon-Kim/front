@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>날짜함수연습</h2>
+    <div><input type="button" value="날짜출력" onclick="fCheck()"></div>
+  </div>
+  <hr/>
+
+  <div id="demo"></div>
+  
+  <script>
+    'use strict';
+
+    function fCheck() {
+      
+      let str = '';
+
+      //Date() today
+
+      const today = new Date();
+      str += '지금은 ' + today + '입니다.';
+
+      str += `이번 년도는 ${today.getFullYear()} 입니다.<br/>`;
+      str += `이번 달은 ${today.getMonth() + 1} 입니다.<br/>`;
+      str += `오늘은 ${today.getDate()} 입니다.<br/>`;
+      str += `지금은 ${today.getHours()} 입니다.<br/>`;
+      str += `지금은 ${today.getMinutes()} 입니다.<br/>`;
+      str += `지금은 ${today.getSeconds()} 입니다.<br/>`;
+      
+      str += `millisec1 ${today.getUTCMilliseconds()}<br/>` ;
+      str += `millisec2 ${today.getTime()} <br/>`;
+
+      let weekStr = ['일','월','화','수','목','금','토'];
+      let weekDay = today.getDay();
+      str += '오늘은' + weekDay + '()' + weekStr[weekDay] + ') 요일입니다.<br/>' ;
+      
+      let lastDate = new Date(2026, 2, 0);
+      str += '이번달 마지막 날은 ' + lastDate.getDate();
+
+      demo.innerHTML = str;
+    }
+
+  </script>
+</body>
+</html>
