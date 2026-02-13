@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>  
+  <script src = 'test05.js'></script>
+</head>
+<body>
+  <h2>inheritance</h2>
+  
+  <script>
+    
+    'use strict';
+
+    member = new Member('kim', 32, 'office worker');
+    console.log('member : ', member);
+    console.log('');
+
+    member.name = 'lee';
+    member.age = 10;
+    member.job = 'univ student';
+    console.log('member : ', member);
+    console.log('');
+
+    class ChildMember extends Member {}
+    let childMember = new ChildMember('pinetree', 10, 'elementary school student');
+    console.log(childMember);
+  </script>
+</body>
+</html>

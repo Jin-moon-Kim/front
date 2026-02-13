@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t10_strictEqulityOperator</title>
+</head>
+<body>
+  <h2></h2>
+  
+  <script>
+    'use strict';
+
+    let n1 = 100;
+    console.log(typeof(n1));
+    let n2 = '100';
+    console.log(typeof(n2));
+
+    let str = '';
+    if(n1==n2) str = 'n1==n2';
+    else str = 'n1!=n2'
+    console.log(str);
+    if(n1===n2) str = 'n1===n2';
+    else str = 'n1!=n2'
+    console.log(str);
+
+  
+
+  </script>
+</body>
+</html>

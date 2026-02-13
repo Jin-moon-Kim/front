@@ -1,0 +1,37 @@
+'use strict'
+    class Member {
+      //field name skip
+
+      //constructor
+      constructor(name, age, job) {
+        this.name = name;
+        this.age = age;
+        this.job = job;
+      }
+
+      get name() {
+        return this._name;
+      }
+      get age() {
+        return this._age;
+      }
+      get job() {
+        return this._job;
+      }
+
+      set name(name) {
+        this._name = name;
+      }
+      set age(age) {
+        if(age < 1) age = 1; //유효성검사
+        this._age = age;
+      }
+      set job(job) {
+        if(job.includes('student')) job = 'student';
+        this._job = job;
+      }
+
+    }
+    let member = new Member('hong', 25, 'highschool student');
+    console.log('member : ', member);
+    console.log('name : ', member.name, ', age : ', member.age, ', job : ', member.job);

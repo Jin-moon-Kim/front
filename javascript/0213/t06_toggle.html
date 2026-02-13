@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <p><br></p>
+  <div class="container"></div>
+  <h2>토글버튼연습</h2>
+  <hr>
+  <p>
+    <button type="button" onclick="fCheck()" class="btn btn-success">toggle</button>
+  </p>
+  <hr>
+  <div id="demo">msg</div>
+
+  <script>
+    'use strict';
+
+    let sw = 0;
+    function fCheck() {
+      if(sw ==0) {
+        demo.innerHTML = 'hi';
+        sw =1;
+      } else {
+        demo.innerHTML = 'msg';
+        sw =0;
+      }
+    }
+  </script>
+</body>
+</html>
