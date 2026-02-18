@@ -8,7 +8,7 @@
   <title>Sign Up</title>
   <style>
     h2 { text-align: center;}
-    input { width: 75%; }
+    /* input { width: 70%; } */
   </style>
 </head>
 <body>
@@ -16,7 +16,7 @@
   <div class="container form-control">
     <div class="form-control">
       <h2>회원가입</h2>
-      <!-- <form action=""> -->
+      <form action="">
       <div class="input-group">
         <div class="input-group-text col-2">ID 입력</div>
         <input type="text" name="id" class="form-control">
@@ -26,28 +26,61 @@
         <div class="input-group-text col-2">비밀번호</div>
         <input type="password" name="pw" class="form-control">
         <div class="input-group-text col-2">재입력</div>
-        <input type="password" name="pw" class="form-control">
+        <input type="password" name="repeat_pw" class="form-control">
       </div><br/>
       <div class="input-group">
         <div class="input-group-text col-2">이메일주소</div>
-        <input type="text" name="id" class="form-control">
+        <input type="text" name="email" class="form-control">
       </div><br/>
       <div class="input-group">
         <div class="input-group-text col-2">이름</div>
-        <input type="text" name="id" class="form-control">
+        <input type="text" name="name" class="form-control">
       </div><br/>
       <div class="input-group">
         <div class="input-group-text col-2">생년월일</div>
-        <input type="text" name="id" class="form-control">
+        <input type="date" name="birthdate" class="form-control">
       </div><br/>
       <div class="input-group">
         <div class="input-group-text col-2">통신사</div>
-        <input type="text" name="id" class="form-control">
-
-      <!-- </form> -->
+        <select name="mcarrier" class="form-control">
+          <option>&nbsp;Choose Your Mobile Carrier</option>
+          <option>&nbsp;skt</option>
+          <option>&nbsp;kt</option>
+          <option>&nbsp;lgt</option>
+        </select>
+      </div><br/>
+      <div class="input-group">
+          <div class="input-group-text col-2">휴대전화번호</div>
+          <input type="text" name="mobile" class="form-control">
+      </div><br/>  
+      <div class="input-group">
+        <div class="input-group-text col-2">국적</div>
+        <div class="form-check form-control" >
+          <input class="form-check-input" type="radio" name="nationality" id="korean" checked>
+          <label class="form-check-label" for="korean">
+            Korean
+          </label>
+        </div>
+        <div class="form-check form-control">
+          <input class="form-check-input" type="radio" name="nationality" id="foreigner">
+          <label class="form-check-label" for="foreigner">
+            Foreigner
+          </label>
+        </div>
+      </div><br/>  
+      <div class="input-group">          
+          <input type="button" name="SignIn" value="Sign In" style="width: 100%;">
+      </div><br/>  
+      </form>
       
       </div>
     </div>
   </div>
+
+  <script>
+    'use strict'
+
+    
+  </script>
 </body>
 </html>
