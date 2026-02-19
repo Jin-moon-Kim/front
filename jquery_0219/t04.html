@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="kor" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t01.html(jquery)</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+  <!-- <script src="t02.js"></script> -->
+  
+  <style>
+    th, td {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <p><br></p>
+  <div class="container">
+    <form name="myform">
+      <h2 class="text-center mb-3">table</h2>
+      <div class="row mb-2">
+        <div class="col"><button id="checkBtn" class="btn btn-success me-2">jquery</button></div>
+        <div class="col"><button id="resetBtn" class="btn btn-warning">reset</button></div>
+      </div>
+      <table class="table table-hover">
+        <tr class="table-secondary">
+          <th>title1</th>
+          <th>title2</th>
+          <th>title3</th>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>12</td>
+          <td>13</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>31</td>
+          <td>32</td>
+          <td>33</td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div id="demo"></div>
+  <script>
+    'use strict';
+
+    $(()=>{
+      $('#checkBtn').click(()=>{
+        $('tr:odd').css('backgroundColor', 'pink');
+        $('tr:even').css('backgroundColor', 'skyblue');
+      });
+
+      
+    });
+  </script>
+</body>
+</html>

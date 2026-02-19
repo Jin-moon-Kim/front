@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>t01.html(jquery)</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <p><br></p>
+  <h2>jQuery</h2>
+  <p id="aa" class="bb">1.hi</p>
+  <p id="" class="bb">2.hi</p>
+  <p id="" class="bb">3.hi</p>
+  <p id="" class="bb">4.hi</p>
+  <p id="" class>5.hi</p>
+
+  <p>
+    <button type="button" onclick="fCheck()">change1</button>
+    <button type="button" id="textBtn">change2</button>
+  </p>
+  <script>
+    'use strict'
+
+    // jQuery(document).ready(function)() {}
+    // $(document).ready(function)() {}
+
+    $(function() {
+      $('h2').css("background-color", "brown");
+      $("h2").css({
+        backgroundColor: "yellow", 
+        color: "#fff"
+      });
+    });
+
+    $('#textBtn').click(function() {
+      alert('2.hi');
+      aa.innerHTML = '1. good to see u'
+    });
+
+    
+    function fCheck() {
+      alert('1.hi');
+      aa.innerHTML = '1. good to see u'
+      $('#aa').html('2.반갑습니다');
+    }
+  </script>
+</body>
+</html>
